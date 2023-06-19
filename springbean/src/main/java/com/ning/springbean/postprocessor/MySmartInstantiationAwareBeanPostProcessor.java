@@ -46,7 +46,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
     @Override
     public Object postProcessBeforeInstantiation(Class beanClass,
                                                  String beanName) throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor调用postProcessBeforeInstantiation方法");
         }
@@ -56,7 +56,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
     // 接口方法、实例化Bean之后调用
     @Override
     public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor调用postProcessAfterInstantiation方法");
         }
@@ -66,7 +66,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
     // 接口方法、初始化Bean之前调用
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor调用postProcessBeforeInitialization方法");
         }
@@ -77,7 +77,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName)
             throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor 调用postProcessAfterInitialization方法");
         }
@@ -89,7 +89,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
     public PropertyValues postProcessPropertyValues(PropertyValues pvs,
                                                     PropertyDescriptor[] pds, Object bean, String beanName)
             throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor 调用postProcessPropertyValues方法");
         }
@@ -105,7 +105,7 @@ public class MySmartInstantiationAwareBeanPostProcessor implements
      */
     @Override
     public Object getEarlyBeanReference(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("person")) {
+        if ("person".equals(beanName)) {
             System.out
                     .println("SmartInstantiationAwareBeanPostProcessor 调用 getEarlyBeanReference 方法");
         }

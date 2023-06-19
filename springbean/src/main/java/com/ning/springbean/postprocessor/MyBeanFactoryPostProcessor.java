@@ -1,9 +1,5 @@
 package com.ning.springbean.postprocessor;
 
-/**
- * desc:
- * createBy: Ningjianjian
- */
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
@@ -30,6 +26,11 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
  * ————————————————
  * 版权声明：本文为CSDN博主「凡夫贩夫」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
  * 原文链接：https://blog.csdn.net/fox9916/article/details/128823328
+ */
+/**
+ * desc:
+ * @author: Ningjianjian
+ * @date 2023/06/01
  */
 public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 

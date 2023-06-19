@@ -11,9 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class SpringbeanApplication {
 
     public static void main(String[] args) {
@@ -24,6 +26,16 @@ public class SpringbeanApplication {
 
         ConfigurableApplicationContext applicationContext = springApplication.run(args);
 
+        testSpringBeanLoad(applicationContext);
+
+
+    }
+
+    /**
+     * 测试spring bean生命周期，加载过程，扩展点
+     * @param applicationContext
+     */
+    private static void testSpringBeanLoad(ConfigurableApplicationContext applicationContext) {
         System.out.println("现在开始初始化容器");
 
         System.out.println("容器初始化成功");
@@ -52,8 +64,6 @@ public class SpringbeanApplication {
         System.out.println("现在开始关闭容器！");
         applicationContext.registerShutdownHook();
         System.out.println("关闭容器调用完成！");
-
-
     }
 
 }
